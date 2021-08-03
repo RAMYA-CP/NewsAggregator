@@ -1,0 +1,56 @@
+
+<head>
+    <title>Post </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      body{
+        background-color:black;
+        font-family:'Arial Narrow';
+         
+      }
+      div.head
+      {
+          background-color: rgb(56, 158, 253);
+          height:40%;
+          text-align:center;
+
+      }
+      h1{
+          position:relative;
+          top:70%;
+      }
+      #stuff
+      {
+          color:white;
+          
+          text-align:center;
+          font-size:17px;
+      }
+  </style>
+</head>
+<body>
+    <div class="head"><h1 style="color: black;font-size:45px"><b>POST AN ARTICLE FROM YOUR FAVOURITE NEWS CHANNEL</b></h1></div>
+    <br>
+    <br>
+{%block content%}
+
+<div class="bg"form  class="form-group" method="POST" id="stuff">
+        <form method="POST">
+        <ul class="contactList">
+            <label>Title:</label><div  >{%csrf_token%}{{ form.title }}</div>
+            <br>
+            <label>Image URL:</label><div >{%csrf_token%}{{ form.image_url }}</div>
+            <br>
+            <label>Blog URL:</label><div >{%csrf_token%}{{ form.blog_url }}</div>
+            <br>
+            <button type="submit" class="btn btn-default">Post</button>
+        </ul>
+        
+        
+    </form>
+</div>
+
+{%endblock%}
+</body>

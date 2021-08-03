@@ -1,0 +1,43 @@
+<div class="top"><h2><b>HERE ARE THE TOP SEARCHES FOR "{{search_query}}"</b></h2></div>
+<style>
+
+    h2
+    {
+        
+        font-family:'Arial Narrow';
+        position:relative;
+        top:60%;
+        
+        text-align: center;
+        font-size: 50px;
+    }
+    body{
+
+        background-color: black;
+    }
+    div.top
+    {
+        background-color:rgb(56, 158, 253);
+        height:40%;
+
+    }
+    div.loop {
+        font-size: 20px;
+        background-color: black;
+        font-family: 'Arial Narrow';
+        position: relative;
+        text-align: center;
+        top: 4%
+
+      
+    }
+    a
+    {
+        color:white;
+    }
+</style>
+<div class="loop">
+{%for i,j in links_list%}
+
+    <h3><a href={{j}}>{{i}}</a></h3>
+{%endfor%}</div>
